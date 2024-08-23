@@ -20,7 +20,6 @@ vim.keymap.set({ "n", "x" }, "gp", '"+p')
 
 vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
-vim.cmd("colorscheme retrobox")
 vim.cmd("filetype plugin on")
 vim.cmd("set foldmethod=manual")
 
@@ -73,8 +72,11 @@ require("lazy").setup({
 				})
 			end
 		},
+    { "sainnhe/gruvbox-material" },
   },
   install = {},
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
+
+vim.cmd("colorscheme gruvbox-material")
