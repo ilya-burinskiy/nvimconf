@@ -14,6 +14,8 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
 vim.keymap.set({ "n", "x" }, "gy", '"+y')
 vim.keymap.set({ "n", "x" }, "gp", '"+p')
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
 -- modify x and X to delete text without changing the internal registers
 -- vim.keymap.set({'n', 'x'}, 'x', '"_x')
 -- vim.keymap.set({'n', 'x'}, 'X', '"_d')
@@ -22,6 +24,7 @@ vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin on")
 vim.cmd("set foldmethod=manual")
+vim.cmd("set background=dark")
 
 -- FINDING FILES
 vim.cmd("set path+=**")
