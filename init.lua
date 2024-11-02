@@ -76,6 +76,10 @@ require("lazy").setup({
 			end
 		},
     { "sainnhe/gruvbox-material" },
+    {
+      "nvim-telescope/telescope.nvim", tag = "0.1.8",
+      dependencies = { "nvim-lua/plenary.nvim" }
+    },
   },
   install = {},
   -- automatically check for plugin updates
