@@ -14,6 +14,16 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+-- pane navigation
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+-- window managment
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true })
+-- toggle minimize
+-- vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>', { noremap = true, silent = true })
 
 -- haskell keymaps
 local ht = require('haskell-tools')
