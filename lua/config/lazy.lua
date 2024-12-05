@@ -21,17 +21,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- BASIC SETUP:
-vim.opt.number = true
-vim.wo.relativenumber = true
-vim.opt.wrap = true
-vim.opt.breakindent = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = false
-vim.opt.hlsearch = true
-
 vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin on")
