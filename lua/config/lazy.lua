@@ -46,3 +46,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
+
+-- setup blank line
+require("ibl").setup()
