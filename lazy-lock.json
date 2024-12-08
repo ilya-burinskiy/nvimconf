@@ -1,8 +1,11 @@
 {
-  "gruvbox-material": { "branch": "master", "commit": "1d0222181879f98fe782f6ed61f1ad922393b005" },
-  "haskell-tools.nvim": { "branch": "master", "commit": "0ecf6eb031f305587ba8bc401bb060d00a1443ec" },
-  "lazy.nvim": { "branch": "main", "commit": "7967abe55752aa90532e6bb4bd4663fe27a264cb" },
-  "nvim-treesitter": { "branch": "master", "commit": "8d4fdc5e47e2a4e00179e43f56221250ce365973" },
+  "gruvbox-material": { "branch": "master", "commit": "170148af9350f578f3623f810e54698fa1e5bdbf" },
+  "haskell-tools.nvim": { "branch": "master", "commit": "cbfee33efb3d7252453e454d61c6b939539ea35f" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "259357fa4097e232730341fa60988087d189193a" },
+  "lazy.nvim": { "branch": "main", "commit": "014d1d6d78df4e58f962158e6e00261d8632612c" },
+  "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
+  "nvim-treesitter": { "branch": "master", "commit": "3b8dee4293567b0b9a87360842af14669f60dd13" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
-  "telescope.nvim": { "branch": "master", "commit": "85922dde3767e01d42a08e750a773effbffaea3e" }
+  "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "which-key.nvim": { "branch": "main", "commit": "9b365a6428a9633e3eeb34dbef1b791511c54f70" }
 }
