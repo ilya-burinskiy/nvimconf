@@ -47,6 +47,9 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 
+require("config.keymaps")
+require("config.options")
+
 -- setup blank line
 require("ibl").setup()
 
