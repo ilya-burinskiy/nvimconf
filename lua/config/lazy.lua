@@ -49,3 +49,5 @@ require("lazy").setup({
 
 -- setup blank line
 require("ibl").setup()
+
+require("mason").setup()
