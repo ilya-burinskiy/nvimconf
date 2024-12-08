@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+  lazy = false,
   config = function ()
     local configs = require("nvim-treesitter.configs")
     configs.setup({
@@ -14,20 +15,19 @@ return {
         "heex",
         "javascript",
         "html",
+        "css",
+        "markdown",
+        "dockerfile",
+        "gitignore",
         "ruby",
         "haskell",
         "racket",
       },
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = true,
+      },
       indent = { enable = true },
     })
   end
 }
--- local M = {
---     "nvim-treesitter/nvim-treesitter",
---     build = function()
---         require("nvim-treesitter.install").update({ with_sync = true })()
---     end,
--- }
--- 
--- return { M }
