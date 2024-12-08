@@ -53,4 +53,4 @@ require("config.options")
 -- setup blank line
 require("ibl").setup()
 
-require("mason").setup()
+-- require("mason").setup()
