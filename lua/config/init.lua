@@ -27,12 +27,9 @@ vim.cmd("filetype plugin on")
 vim.cmd("set foldmethod=manual")
 vim.cmd("set background=dark")
 
--- modify x and X to delete text without changing the internal registers
--- vim.keymap.set({'n', 'x'}, 'x', '"_x')
--- vim.keymap.set({'n', 'x'}, 'X', '"_d')
 -- FINDING FILES
 -- vim.cmd("set path+=**")
--- vim.cmd("set wildmenu")
+vim.cmd("set wildmenu")
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -52,5 +49,3 @@ require("config.options")
 
 -- setup blank line
 require("ibl").setup()
-
--- require("mason").setup()
