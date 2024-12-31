@@ -49,3 +49,21 @@ require("config.options")
 
 -- setup blank line
 require("ibl").setup()
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+-- setup lsp
+local lspconfig = require("lspconfig")
+lspconfig.lua_ls.setup({
+  settings = {
+    Lua = {
+      diagnostics = { globals = { "vim" } },
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.stdpath("config") .. "/lua"] = true,
+        }
+      },
+    },
+  },
+})
