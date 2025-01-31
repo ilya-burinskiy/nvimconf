@@ -67,3 +67,26 @@ lspconfig.lua_ls.setup({
     },
   },
 })
+-- local luacheck = require("efmls-configs.linters.luacheck")
+-- local stylua = require("efmls-configs.formatters.stylua")
+-- lspconfig.efm.setup({
+--   filetypes = {
+--     "lua",
+--   },
+--   init_options = {
+--     documentFormatting = true,
+--     documentRangeFormatting = true,
+--     hover = true,
+--     documentSymbol = true,
+--     codeAction = true,
+--     completion = true,
+--   },
+--   settings = {
+--     languages = {
+--       lua = {
+--         luacheck,
+--         stylua
+--       },
+--     },
+--   },
+-- })
