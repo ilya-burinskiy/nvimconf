@@ -67,6 +67,7 @@ lspconfig.lua_ls.setup({
     },
   },
 })
+
 -- local luacheck = require("efmls-configs.linters.luacheck")
 -- local stylua = require("efmls-configs.formatters.stylua")
 -- lspconfig.efm.setup({
@@ -90,3 +91,4 @@ lspconfig.lua_ls.setup({
 --     },
 --   },
 -- })
+lspconfig.elixirls.setup({ cmd = { "elixir-ls" } })
