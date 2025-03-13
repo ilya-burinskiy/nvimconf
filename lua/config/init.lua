@@ -34,8 +34,83 @@ vim.cmd("set wildmenu")
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- import your plugins
-    { import = "plugins" },
+    -- colorscheme
+    {
+      "sainnhe/gruvbox-material",
+      lazy = false,
+      priority = 1000,
+      config = function()
+        vim.cmd("colorscheme gruvbox-material")
+      end
+    },
+    {
+      "lukas-reineke/indent-blankline.nvim",
+      main = "ibl",
+      ---@module "ibl"
+      ---@type ibl.config
+      opts = {},
+    },
+    {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+      opts = {
+        ensure_installed = { "efm", "lua_ls" },
+        automatic_installation = true,
+      },
+      event = "BufReadPre",
+    },
+    {
+      "nvim-telescope/telescope.nvim", tag = "0.1.8",
+      dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
+      lazy = false,
+      config = function ()
+        local configs = require("nvim-treesitter.configs")
+        configs.setup({
+          ensure_installed = {
+            "c",
+            "lua",
+            "vim",
+            "vimdoc",
+            "query",
+            "elixir",
+            "heex",
+            "javascript",
+            "html",
+            "css",
+            "markdown",
+            "dockerfile",
+            "gitignore",
+            "ruby",
+            "haskell",
+            "racket",
+          },
+          highlight = {
+            enable = true,
+            additional_vim_regex_highlighting = true,
+          },
+          indent = { enable = false },
+        })
+      end
+    },
+    {
+      "folke/which-key.nvim",
+      event = "VeryLazy",
+      opts = {},
+      keys = {
+        {
+          "<leader>?",
+          function()
+            require("which-key").show({ global = false })
+          end,
+          desc = "Buffer Local Keymaps (which-key)",
+        },
+      },
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
