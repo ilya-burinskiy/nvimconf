@@ -44,8 +44,57 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 
-require("config.keymaps")
-require("config.options")
+-- basic keymaps
+vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
+vim.keymap.set({ "n", "x" }, "gy", '"+y')
+vim.keymap.set({ "n", "x" }, "gp", '"+p')
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- modify x and X to delete text without changing the internal registers
+-- vim.keymap.set({'n', 'x'}, 'x', '"_x')
+-- vim.keymap.set({'n', 'x'}, 'X', '"_d')
+
+-- KEYMAPS
+-- telescope keymaps
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+-- pane navigation
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+-- window managment
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true })
+-- toggle minimize
+-- vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>', { noremap = true, silent = true })
+
+-- OPTIONS
+-- Appearence
+vim.opt.number = true
+vim.wo.relativenumber = true
+vim.opt.termguicolors = true
+vim.opt.colorcolumn = '120'
+vim.opt.signcolumn = 'yes'
+-- Behaviour
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
+vim.opt.splitright = false
+vim.opt.autochdir = false
+-- Tab/Indetation
+vim.opt.wrap = true
+vim.opt.breakindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = false
+-- Search
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
 -- setup blank line
 require("ibl").setup()
