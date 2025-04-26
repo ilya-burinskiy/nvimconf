@@ -78,6 +78,7 @@ require("lazy").setup({
             "vimdoc",
             "query",
             "elixir",
+            "go",
             "heex",
             "javascript",
             "html",
