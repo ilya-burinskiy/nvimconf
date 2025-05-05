@@ -25,7 +25,10 @@ vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin on")
 vim.cmd("set foldmethod=manual")
-vim.cmd("set background=dark")
+vim.cmd("set background=light")
+vim.diagnostic.config({
+  virtual_text = true,
+})
 
 -- FINDING FILES
 -- vim.cmd("set path+=**")
@@ -40,7 +43,7 @@ require("lazy").setup({
       lazy = false,
       priority = 1000,
       config = function()
-        vim.cmd("colorscheme gruvbox-material")
+        -- vim.cmd("colorscheme gruvbox-material")
       end
     },
     {
