@@ -99,20 +99,20 @@ require("lazy").setup({
         })
       end
     },
-    {
-      "folke/which-key.nvim",
-      event = "VeryLazy",
-      opts = {},
-      keys = {
-        {
-          "<leader>?",
-          function()
-            require("which-key").show({ global = false })
-          end,
-          desc = "Buffer Local Keymaps (which-key)",
-        },
-      },
-    },
+    -- {
+    --   "folke/which-key.nvim",
+    --   event = "VeryLazy",
+    --   opts = {},
+    --   keys = {
+    --     {
+    --       "<leader>?",
+    --       function()
+    --         require("which-key").show({ global = false })
+    --       end,
+    --       desc = "Buffer Local Keymaps (which-key)",
+    --     },
+    --   },
+    -- },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
