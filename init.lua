@@ -26,6 +26,7 @@ vim.cmd("syntax enable")
 vim.cmd("filetype plugin on")
 vim.cmd("set foldmethod=manual")
 vim.cmd("set background=dark")
+vim.cmd("colorscheme vim")
 
 -- FINDING FILES
 -- vim.cmd("set path+=**")
@@ -39,9 +40,9 @@ require("lazy").setup({
       "sainnhe/gruvbox-material",
       lazy = false,
       priority = 1000,
-      config = function()
-        vim.cmd("colorscheme gruvbox-material")
-      end
+      -- config = function()
+      --   vim.cmd("colorscheme gruvbox-material")
+      -- end
     },
     {
       "lukas-reineke/indent-blankline.nvim",
@@ -115,7 +116,7 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "gruvbox-material" } },
+  -- install = { colorscheme = { "gruvbox-material" } },
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
@@ -152,9 +153,9 @@ vim.keymap.set('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true 
 -- Appearence
 vim.opt.number = true
 vim.wo.relativenumber = true
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.colorcolumn = '120'
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'auto'
 -- Behaviour
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
