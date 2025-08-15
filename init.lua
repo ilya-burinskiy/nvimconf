@@ -1,3 +1,5 @@
+-- :let @/ = "" почистить поиск
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -26,6 +28,13 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = "Next buffer" })
 vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = "Previous buffer" })
+
+-- text moving
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>', { desc = 'Move line down' })
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>', { desc = 'Move line up' })
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
+
 -- window managment
 vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true })
