@@ -28,6 +28,8 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = "Next buffer" })
 vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = "Previous buffer" })
+vim.keymap.set('n', '<leader>e', ':Explore<CR>', { desc = "Open file explorer" })
+vim.keymap.set('n', '<leader>ff', ':find ', { desc = "Find file" })
 
 -- text moving
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>', { desc = 'Move line down' })
